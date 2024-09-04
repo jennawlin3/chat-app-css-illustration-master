@@ -1,0 +1,320 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --pale-violet /*(sub-heading at the top of the app UI)*/: hsl(276, 100%, 81%);
+    --moderate-violet /*(chat on the left)*/: hsl(276, 55%, 52%);
+    --desaturated-dark-violet /*(chat on the right)*/: hsl(271, 15%, 43%);
+    --grayish-blue /*(placeholder text)*/: hsl(206, 6%, 79%);
+    --very-dark-desaturated-violet /*(main heading)*/: hsl(271, 36%, 24%);
+    --dark-grayish-violet /*(paragraph)*/: hsl(270, 7%, 64%);
+    --light-magenta: hsl(293, 100%, 63%);
+    --light-violet: hsl(264, 100%, 61%);
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet /*(app background)*/: hsl(270, 20%, 96%);
+    --very-dark-desaturated-violet /*(submit button background)*/: hsl(271, 36%, 24%);
+    --very-light-magenta /*(radio button outline)*/: hsl(289, 100%, 72%);
+    font-size: 16px;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: var(--light-grayish-violet);
+    position: relative;
+}
+
+.container {
+    margin-top: -60px;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 60px 0;
+}
+
+.hero-container::before {
+    content: "";
+    background: linear-gradient(45deg, hsl(264, 100%, 61%) 30%, #d168df);
+    height: 700px;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0 0 700px;
+}
+
+.phone-container {
+    background-color: var(--white);
+    width: 60%;
+    padding: 10px;
+    border-radius: 30px;
+    margin-top: 70px;
+    position: relative;
+    z-index: 999;
+}
+
+.user1-info_container {
+    display: flex;
+    align-items: center;
+    padding: 30px 15px 10px;
+    background: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    border-radius: 20px 20px 5px 5px;
+    position: relative;
+    width: 100%;
+}
+
+.user1-info_container::after {
+    content: "";
+    height: 20px;
+    width: 130px;
+    background-color: var(--white);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0 0 20px 20px;
+}
+
+.fa-angle-left {
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+.avatar-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.user1-info p {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--light-grayish-violet);
+    cursor: pointer;
+}
+
+.user1-info small {
+    font-size: 0.7rem;
+    color: var(--pale-violet);
+}
+
+.more-btn {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.fa-ellipsis-vertical {
+    cursor: pointer;
+}
+
+.conversation-container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-grayish-violet);
+    margin-top: -15px;
+    padding-top: 15px;
+    border-radius: 0 0 15px 15px;
+}
+
+.user1-msg, .user2-msg {
+    width: 60%;
+}
+
+.user1, .user2 {
+    font-size: 0.7rem;
+    padding: 10px;
+    margin: 10px 10px 0;
+}
+
+.user1 {
+    background-color: #ede2efd6;
+    color: var(--moderate-violet);
+    border-radius: 15px 15px 15px 5px;
+}
+
+.msg-photos {
+    display: flex;
+    gap: 10px;
+    padding-right: 10px;
+}
+
+.msg-photos img {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+}
+
+.user2 {
+    align-self: flex-end;
+}
+
+.user2-msg {
+    background-color: var(--white);
+    color: var(--desaturated-dark-violet);
+    align-self: flex-end;
+    border-radius: 15px 15px 5px 15px;
+}
+
+.msg_options {
+    background: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%)) !important;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.msg_options input[type="radio"] {
+    background-color: transparent !important;
+    border: 1px solid var(--white) !important;
+}
+
+.msg_options label {
+    color: var(--light-grayish-violet);
+    font-weight: 300;
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    padding: 0 10px;
+    align-items: center;
+    font-size: 0.6rem;
+}
+
+.price {
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.response-container {
+    background-color: var(--white);
+    padding: 10px;
+    margin: 15px 10px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+button[type ="submit"] {
+    background-color: var(--very-dark-desaturated-violet);
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+textarea {
+    font-family: "Rubik", sans-serif;
+    border: none;
+    height: auto;
+    outline: none;
+    resize: none;
+    width: 85% !important;
+    min-height: 35px;
+    font-size: 0.7rem;
+}
+textarea::-webkit-scrollbar {
+    display: none;
+}
+
+textarea::placeholder {
+    color: var(--grayish-blue);
+    padding-top: 10px;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    align-items: center;
+}
+
+.content-container h1 {
+    font-size: 2rem;
+    color: var(--very-dark-desaturated-violet);
+    font-weight: 500;
+}
+
+.content-container p {
+    line-height: 1.7;
+    color: var(--dark-grayish-violet);
+    margin: 20px 0;
+}
+
+@media screen and (min-width: 768px) {
+    .phone-container {
+        width: 350px;
+    }
+
+    .content-container p {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        display: flex;
+    }
+
+    .hero-container { 
+        width: 50vw;
+        align-items: flex-end;
+        padding-right: 100px;
+    }
+
+    .phone-container {
+        width: 350px;
+    }
+
+    .hero-container::before {
+        width: 400px;
+        border-radius: 0 0 700px 700px;
+    }
+
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    body::after {
+        content: "";
+        background: #ede2efd6;
+        height: 600px;
+        width: 400px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-radius: 0 0 700px 700px;
+        transform: rotate(180deg);
+        opacity: .4;
+        z-index: -1;
+    }
+
+    .content-container h1 {
+        text-align: left;
+    }
+
+    .content-container p {
+        width: 400px;
+    }
+}
+
+
+
