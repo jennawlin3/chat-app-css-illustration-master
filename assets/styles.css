@@ -27,6 +27,24 @@ body {
     position: relative;
 }
 
+body, html {
+    overflow-x: hidden;
+}
+
+body::after {
+    content: "";
+    background: #ede2efd6;
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 0 0 700px 700px;
+    transform: rotate(180deg) translateX(-180px);
+    opacity: .4;
+    z-index: -1;
+}
+
 .container {
     margin-top: -60px;
 }
@@ -58,6 +76,7 @@ body {
     margin-top: 70px;
     position: relative;
     z-index: 999;
+    box-shadow: 10px 10px 20px #ddd;
 }
 
 .user1-info_container {
@@ -68,6 +87,7 @@ body {
     border-radius: 20px 20px 5px 5px;
     position: relative;
     width: 100%;
+    box-shadow: 10px 10px 20px #ddd;
 }
 
 .user1-info_container::after {
@@ -131,6 +151,127 @@ body {
     width: 60%;
 }
 
+.delay3 {
+    visibility: visible;
+    animation: delay3Sec 5s ease-in;
+    animation-duration: 3s;
+}
+
+@keyframes delay3Sec {
+    0% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: hidden;
+    }
+}
+
+.delay5 {
+    visibility: visible;
+    animation: delay3Sec 5s ease-in;
+    animation-duration: 5s;
+}
+
+@keyframes delay5Sec {
+    0% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: hidden;
+    }
+}
+
+.delay3 {
+    visibility: visible;
+    animation: delay3Sec 5s ease-in;
+    animation-duration: 3s;
+}
+
+@keyframes delay8Sec {
+    0% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: hidden;
+    }
+}
+
+.delay8 {
+    visibility: visible;
+    animation: delay3Sec 5s ease-in;
+    animation-duration: 8s;
+}
+
+@keyframes delay10Sec {
+    0% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: hidden;
+    }
+}
+
+.delay10 {
+    visibility: visible;
+    animation: delay3Sec 5s ease-in;
+    animation-duration: 10s;
+}
+
+@keyframes delay10Sec {
+    0% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: hidden;
+    }
+}
+
+.delay12 {
+    visibility: visible;
+    animation: delay3Sec 5s ease-in;
+    animation-duration: 12s;
+}
+
+@keyframes delay12Sec {
+    0% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: hidden;
+    }
+}
+
+.delay14 {
+    visibility: visible;
+    animation: delay3Sec 5s ease-in;
+    animation-duration: 14s;
+}
+
+@keyframes delay14Sec {
+    0% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: hidden;
+    }
+}
+
+
+.delay17 {
+    visibility: visible;
+    animation: delay3Sec 5s ease-in;
+    animation-duration: 17s;
+}
+
+@keyframes delay17Sec {
+    0% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: hidden;
+    }
+}
+
 .user1, .user2 {
     font-size: 0.7rem;
     padding: 10px;
@@ -174,9 +315,35 @@ body {
 }
 
 .msg_options input[type="radio"] {
-    background-color: transparent !important;
-    border: 1px solid var(--white) !important;
+    appearance: none;
+    -webkit-appearance: none;  
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid #ffffff73;
+    border-radius: 50%;
+    margin-top: 3px;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
 }
+
+.msg_options input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+  }
+
+  .msg_options input[type="radio"]:checked::before {
+    transform: scale(1);
+    background-color: #fff;
+  }
 
 .msg_options label {
     color: var(--light-grayish-violet);
@@ -198,7 +365,7 @@ body {
 
 .response-container {
     background-color: var(--white);
-    padding: 10px;
+    padding: 5px 10px;
     margin: 15px 10px;
     border-radius: 20px;
     display: flex;
@@ -294,17 +461,10 @@ textarea::placeholder {
     }
 
     body::after {
-        content: "";
-        background: #ede2efd6;
-        height: 600px;
-        width: 400px;
-        position: absolute;
-        bottom: 0;
-        right: 0;
+        height: 650px;
+        width: 450px;
         border-radius: 0 0 700px 700px;
-        transform: rotate(180deg);
-        opacity: .4;
-        z-index: -1;
+        transform: rotate(180deg) translateX(-180px);
     }
 
     .content-container h1 {
